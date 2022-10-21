@@ -7,7 +7,7 @@ function MainPage () {
     return (
         <div className={styles.container}>
             <div>
-                <Routers img={listIcon}/>
+                <Routers img={listIcon} router='/views'/>
                 <div>
                     <h2>Todos os Automóveis</h2>
                     <p>Liste todos os automóveis disponíveis, além de poder editá-los e excluí-los.</p>

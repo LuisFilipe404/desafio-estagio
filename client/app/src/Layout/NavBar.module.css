@@ -2,12 +2,15 @@
     padding: 50px 0px;
     width: 100vw;
     background-color: #f3f3f3;
+    height: 15vh;
+
 }
 
 .container {
     display: flex;
     justify-content:  space-around;
     align-items: center;
+    height: 100%;
 }
 
 .container > h1 > a {
@@ -54,7 +57,7 @@
 
     .container > nav > ul {
         position: absolute;
-        top: 150px;
+        top: 120px;
         right: 0px;
         gap: 0px;
         flex-direction: column;

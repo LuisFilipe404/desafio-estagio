@@ -1,0 +1,50 @@
+.container {
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.container > div > h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 300;
+    font-size: 1.7em;
+    color: black;
+    margin-bottom: 80px;
+}
+
+.container > div > img {
+    width: 10vh;
+    margin-bottom: 10px;
+}
+
+.container > div > button {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: #42afde;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.container > div > button:hover {
+    background-color: #4988a3;
+}

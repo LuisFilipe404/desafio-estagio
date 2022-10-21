@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import MainPage from './Components/MainPage'
 import ViewPage from './Components/ViewPage'
 import Create from './Components/Create'
+import SubmitForm from './Components/SubmitForm'
 
 //Importação dos Layouts
 
@@ -26,6 +27,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<MainPage/>} />
         <Route path="/createnew" element={<Create/>}/>
+        <Route path="/sucessform" element={<SubmitForm/>}/>
+        <Route path="/views" element={<ViewPage/>}/>
       </Routes>
       <Footer/>
     </Router>

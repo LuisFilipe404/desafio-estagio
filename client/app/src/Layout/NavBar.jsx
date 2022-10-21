@@ -38,7 +38,7 @@ function NavBar () {
                 <nav>
                     <ul className='hideContainer' id='nav'>
                         <li>
-                            <Link>Todos os Automóveis</Link>
+                            <Link to='views'>Todos os Automóveis</Link>
                         </li>
                         <li>
                             <Link to='/createnew'>Criar um Novo Automóvel</Link>
