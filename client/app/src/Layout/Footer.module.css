@@ -1,0 +1,25 @@
+.container {
+    background-color: #f3f3f3;
+    margin-top: 20px;
+    position: relative;
+    bottom: -28px;
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 400;
+}
+
+@media  screen and (max-width: 910px){
+    .container {
+        position: initial;
+        margin-top: 65px;
+    }
+}

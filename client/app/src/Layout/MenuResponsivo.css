@@ -1,0 +1,67 @@
+.container {
+    display: none;
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 910px){
+
+    /* Gaveta */
+    .container {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 50px;
+        height: 50px;
+        transition: all 0.5s;
+    }
+    
+    .container div {
+        background-color: #1f1f1f;
+        border-radius: 7px;
+        width: 65%;
+        height: 5px;
+    }
+
+    .animationIn .line1{
+        transform: translatey(5px) rotate(45deg);
+        transition: all 0.5s;
+    }
+
+    .animationIn .line2 {
+        transform: scale(0, 0);
+        position: absolute;
+    }
+
+    .animationIn .line3 {
+        transform: translateY(-5px) rotate(-45deg);
+        transition: all 0.5s;
+    }
+
+    .animationOut .line1 {
+        transform: translateY(0px) rotate(0deg);
+        transition: all 0.5s;
+    }
+
+    .animationOut .line2 {
+        display: flex;
+        visibility: visible;
+        transition: all 0.5s;
+        position: initial;
+    }
+
+    .animationOut .line3 {
+        transform: translateY(0px) rotate(0deg);
+        transition: all 0.5s;
+    }
+
+    .hideContainer {
+        visibility: hidden;
+        display: none;
+    }
+
+}
+

@@ -1,0 +1,103 @@
+.headerContainer {
+    padding: 50px 0px;
+    width: 100vw;
+    background-color: #f3f3f3;
+}
+
+.container {
+    display: flex;
+    justify-content:  space-around;
+    align-items: center;
+}
+
+.container > h1 > a {
+    text-decoration: none;
+    font-size: 1.9rem;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 500;
+    color: #1f1f1f;
+}
+
+.container > nav > ul {
+    display: flex;
+    gap: 25px;
+}
+
+.container > nav > ul > li {
+    list-style: none;   
+}
+
+.container > nav > ul > li > a {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; 
+    text-decoration: none;
+    font-weight: 400;
+    color: #2c2c2c;
+    padding: 3px;
+    text-transform: uppercase;
+}
+
+.container > nav > ul > li > a:hover{
+    border-bottom: .5px solid black;
+}
+
+@media screen and (max-width: 910px){
+    .searchIpt {
+        display: none;
+        visibility: hidden;
+    }
+    
+    .headerContainer > nav {
+        display: none;
+        visibility: hidden;;
+    }
+
+    .container > nav > ul {
+        position: absolute;
+        top: 150px;
+        right: 0px;
+        gap: 0px;
+        flex-direction: column;
+        background-color: #2d2d2d;
+    }
+
+    .container > nav > ul > li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container > nav > ul > li > a {
+        color: #e9e9e9;
+        text-align: center;
+
+        padding: 25px 50px;
+        width: 100%;
+    }
+
+    .container > nav > ul > li > a:hover {
+        border: none;
+        background-color: #3a3a3a;
+    }
+
+}
+
+@media  screen and (max-width: 425px){
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container > nav > ul > li {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .container > h1 > a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-family: 'Julius Sans One', sans-serif;
+        font-weight: 500;
+        color: #1f1f1f;;
+    }
+}
