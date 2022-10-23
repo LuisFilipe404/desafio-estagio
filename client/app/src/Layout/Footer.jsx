@@ -1,3 +1,5 @@
+// Layout de Footer
+
 import styles from './Footer.module.css'; // Importação do Css
 
 function Footer () {

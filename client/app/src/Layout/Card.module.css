@@ -1,0 +1,33 @@
+.container {
+    width: 70vw;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container > h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.container > p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.disp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img {
+    width: 25px;
+}

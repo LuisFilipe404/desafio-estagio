@@ -1,14 +1,12 @@
-import styles from './Create.module.css'; //Importação do Css
-import { useState } from 'react'
-import Axios from 'axios'
-import { redirect } from "react-router-dom";
-
-
+import styles from './Form.module.css'; // Importação do Css
+import { useState } from 'react' // Importação do State
+import Axios from 'axios' // Importação do Axios
 
 function Create () {
 
-    const [values, setValues] = useState();
+    const [values, setValues] = useState(); // Armazenar os valores dos automóveis que serão enviados
 
+    // Juntar os dados do state em um objeto que será enviado para o backend no formato 'nome : valor'
     const handleChangeValue = (value) => {
         setValues((prevValue) => ({
         ...prevValue,
@@ -16,8 +14,7 @@ function Create () {
         }));
     };
 
-    console.log(values);
-
+    // Enviar os dados pro backend pelo Axios e receber no express
     const submitEvent = () => {
         Axios.post("http://localhost:3001/register",{
           modelo: values.modelo,
@@ -26,16 +23,17 @@ function Create () {
           disp: values.disp
         }).then((response) => {
           console.log(response);
-        })
-      }
+        });
+    };
 
+    // Mudar a página após o envio do formulário
     const changePage = (e) => {
         e.preventDefault()
         window.location.href="http://localhost:5173/sucessform"
     }
 
     return (
-        <div className={styles.container}>
+        <main className={styles.containersub}>
             <form action='POST=' onSubmit={changePage}>
                 <h1>Crie um Novo Automóvel</h1>
                 <fieldset className={styles.fieldset}>
@@ -47,8 +45,10 @@ function Create () {
                             required 
                             id="modelo"
                             name='modelo'
-                            onChange={handleChangeValue} />
+                            onChange={handleChangeValue} 
+                        />
                     </div>
+                    
                     <div className={styles.ipt}>
                         <label htmlFor="marca">Marca do Carro</label>
                         <input 
@@ -56,18 +56,25 @@ function Create () {
                             placeholder="Digite a marca" 
                             required
                             name='marca'
-                            onChange={handleChangeValue}/>
+                            onChange={handleChangeValue}
+                        />
                     </div>
 
                     <div className={styles.selection}>
                         <label htmlFor="options">Escolha uma opção</label>
-                        <select onChange={handleChangeValue} name='tipo' id="options" required>
+                        <select 
+                            onChange={handleChangeValue} 
+                            name='tipo' 
+                            id="options" 
+                            required
+                        >
                             <option value="">Tipo</option>
-                            <option value="hatch">Hatch</option>
-                            <option value="sedan">Sedan</option>
-                            <option value="suv">SUV</option>
+                            <option value="Hatch">Hatch</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Suv">SUV</option>
                         </select>
                     </div>
+
                     <div className={styles.radioContainer}>
                         <p>Situação:</p>
                         <div>
@@ -93,10 +100,13 @@ function Create () {
                             </div>
                         </div>
                     </div>
-                    <button onClick={() => submitEvent()} type='submit' className={styles.btn}>Criar um novo automóvel</button>
+                    <button 
+                        onClick={() => submitEvent()} 
+                        type='submit' 
+                        className={styles.btn}>Criar um novo automóvel</button>
                 </fieldset>
             </form>
-        </div>
+        </main>
     )
 }
 

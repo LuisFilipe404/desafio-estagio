@@ -1,6 +1,6 @@
 .container {
     width: 100vw;
-    height: 65vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +25,7 @@
     font-size: 1.7em;
     color: black;
     margin-bottom: 80px;
+    text-align: center;
 }
 
 .container > div > img {
@@ -47,4 +48,15 @@
 
 .container > div > button:hover {
     background-color: #4988a3;
+}
+
+@media screen and (max-width: 910px) {
+    .container > div {
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        backdrop-filter: none;
+        border: none;
+        padding-top: 10px;
+    }
 }

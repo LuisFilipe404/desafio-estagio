@@ -12,3 +12,13 @@
     width: 250px;
     height: auto;
 }
+
+@media screen and (max-width: 540px){
+    .container {
+        width: 200px;
+        height: 200px;
+    }
+    .container a img {
+        width: 150px;;
+    }
+}

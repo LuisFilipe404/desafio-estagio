@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom' // Importar os links
+// Layout para barra de navegação
+
+import { Link } from 'react-router-dom' // Importar os links do router-dom
 
 // Importar Css //
 
@@ -28,7 +30,6 @@ function NavBar () {
             menu.classList.add('animationOut')
             hideMenu.classList.add('hideContainer')
         }
-    
     }
     
     return (
@@ -43,16 +44,18 @@ function NavBar () {
                         <li>
                             <Link to='/createnew'>Criar um Novo Automóvel</Link>
                         </li>
+                        <li>
+                            <Link to='/edit'>Edite um Automóvel</Link>
+                        </li>
                     </ul>
                 </nav>
-                
+            
                 <div onClick={changeMenu} className='container' id='menu'>
                     <div className='line1'></div>
                     <div className='line2'></div>
                     <div className='line3'></div>
                 </div>
             </div>
-
         </header>
     )
 }
